@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Helvetica;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #999;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #BBB;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: #DBCEC0;}
+#Vanilla {background-color: #B3EFD3;}
+#Moderate {background-color: #F7E2AD;}
+#Heavy {background-color: #F4B0A6;}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, '#AB947A')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Vanilla', this, '#B3EFD3')">Vanilla+ (<5)</button>
+<button class="tablink" onclick="openPage('Moderate', this, '#F7E2AD')">Moderate (between 5 and 50)</button>
+<button class="tablink" onclick="openPage('Heavy', this, '#F4B0A6')">Heavy (50+)</button>
+
+<div id="Home" class="tabcontent">
+  <h3>GRF is a Recommendation Forum</h3>
+  <p>Welcome to GRF, click on a tab for recommendations</p>
+</div>
+
+<div id="Vanilla" class="tabcontent">
+  <h3>For those just getting into modding OpenTTD.</h3>
+  <br>
+  <br>
+  <h4>AndyTheNorth is God</h4>
+  <p>Author: Cpt.Klutz</p>
+  <p>Last Updated: 2021</p>
+  <table style="width:50%">
+  <tr>
+    <th>Name</th>
+    <th>Type</th> 
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>FIRS 3</td>
+    <td>Industry</td>
+    <td>Configure industry settings with 'parameters'</td>
+  </tr>
+  <tr>
+    <td>Iron Horse</td>
+    <td>Rail Vehicles</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Road Hog</td>
+    <td>Road Vehicles</td>
+    <td></td>
+  </tr>
+</table>
+</div>
+
+<div id="Moderate" class="tabcontent">
+  <h3>For those looking for a more immersive game.</h3>
+  <p></p>
+</div>
+
+<div id="Heavy" class="tabcontent">
+  <h3>For those who want to experience all GRFs have to offer.</h3>
+  <p></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
