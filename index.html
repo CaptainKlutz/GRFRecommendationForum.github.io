@@ -7,14 +7,14 @@
 .spoilerbutton {display:block;margin:5px 0;}
 .spoiler {overflow:hidden;background: #f5f5f5;}
 .spoiler > div {-webkit-transition: all 0.2s ease;-moz-transition: margin 0.2s ease;-o-transition: all 0.2s ease;transition: margin 0.2s ease;}
-.spoilerbutton[value="Show"] + .spoiler > div {margin-top:-100%;}
+.spoilerbutton[value="Show"] + .spoiler > div {margin-top:-150%;}
 .spoilerbutton[value="Hide"] + .spoiler {padding:5px;} 
 
 * {box-sizing: border-box}
 
 /* Set height of body and the document to 100% */
 body, html {
-  height: 100%;
+  height: 200%;
   margin: 0;
   font-family: Helvetica;
 }
@@ -63,8 +63,14 @@ table, th, td {
 <button class="tablink" onclick="openPage('Heavy', this, '#F4B0A6')">Heavy (50+)</button>
 
 <div id="Home" class="tabcontent">
-  <h3>GRF is a Recommendation Forum</h3>
-  <p>Welcome to GRF, click on a tab for recommendations</p>
+  <h1>GRF is a Recommendation Forum</h1>
+  <p>Welcome to GRF, click on a tab for recommendations.</p>
+  <h2>Notes</h2>
+  <h4>THE EASIEST WAY TO ADD GRF LISTS TO YOUR GAME is to open your openttd.cfg, and paste whatever's in the spoiler box you want on a new line above the line beginning [newgrf].</h4>
+  <p>The game will then tell you if you're missing anything when you try to load the preset in-game.</p>
+  <p>For 64+ GRFs at once to be loaded, you MUST use a patch pack such as <a href="https://github.com/JGRennison/OpenTTD-patches/releases">JGRPP</a>.</p>
+  <p><b>'CD'</b> column denotes if a GRF is available on the Online Content Downloader, serviced by <a href="https://bananas.openttd.org">Bananas</a>. If it's not available, it should be linked in <b>Notes</b>.
+  <p>If you want to add your own list, visit <a href="https://github.com/CaptainKlutz/GRF.github.io">the Github</a> to start contributing.</p>
 </div>
 
 <div id="Vanilla" class="tabcontent">
@@ -77,21 +83,25 @@ table, th, td {
   <table style="width:50%">
   <tr>
     <th>Name</th>
+	<th>CD?</th>
     <th>Type</th> 
     <th>Notes</th>
   </tr>
   <tr>
     <td>FIRS 3</td>
+	<td>Yes</td>
     <td>Industry</td>
     <td>Configure industry settings with 'parameters'</td>
   </tr>
   <tr>
     <td>Iron Horse</td>
+	<td>Yes</td>
     <td>Rail Vehicles</td>
     <td></td>
   </tr>
   <tr>
     <td>Road Hog</td>
+	<td>Yes</td>
     <td>Road Vehicles</td>
     <td></td>
   </tr>
@@ -112,7 +122,106 @@ table, th, td {
 
 <div id="Heavy" class="tabcontent">
   <h3>For those who want to experience all GRFs have to offer.</h3>
-  <p></p>
+  <br>
+  <br>
+  <h4>Discord JGR server 2, 'Taiwan to the Future'</h4>
+  <p>Author: Cpt.Klutz</p>
+  <p>Last Updated: January 2021</p>
+  <p><b>CD?</b> Yes</p>
+  <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
+  <div class="spoiler"><div>
+  [preset-S2JanJapan]<br>   
+  4E4D2005|6CDB71C352BC28C665F06B610AA41576|nml_cat2.0_gui_misc_town_names-42069\nml_category_system-05-gui_misc_and_town_names.grf = <br>
+  4F472B34|136D889FDAEAA3491F8320248A04425C|opengfx_landscape-1.1.2\ogfx-landscape.grf = 12 1 12 20 5 0<br>
+  43415000|FBAE0C1ACFDA5AE8B95B4DA230A395FE|opengfx_airports-0.5.0\ogfx-airports.grf = 5 9 0<br>
+  46727806|BBE029FCDD7A16F85876D417FF318D23|opengfx_trees-0.8.0\opengfx+trees.grf = 2 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1<br>
+  686D6301|ECFF8464F08FD6772E7A133C46FA43F2|more_british_town_names-1.0\morebritishtownnames_1.grf = <br>
+  4E4D2009|5B50C21DC1C21489D8861285A1D45746|nml_cat2.0_buildings-42069\nml_category_system-09-buildings.grf = <br>
+  52453400|B2E27B74A3894198A00139CFCF09D011|japanese_buildings-3.1\jpbuild.grf = 2 0 1<br>
+  474A0002|ED7FABDD97E5E08DB264B42ED1054BCB|swedish_houses_early_mod-modified11.1.1\swehousesearlymod.grf = <br>
+  4E4D2016|D57860A58A6E9F33AEC83913256276D9|nml_cat2.0_industries-42069\nml_category_system-16-industries.grf = <br>
+  4A448807|A153A80310865877F31066848A84468B|extreme_industry_set-0.6.1\xis_0.6.1.grf = 0 0 0 0 0 0 50 500 200 1000<br>
+  4E4D2010|7AF4DEA04B4805A2D10ECEC4A83BFE3A|nml_cat2.0_infrastructure-42069\nml_category_system-10-infrastructure.grf = <br>
+  44503000|0BF5A48500990CF4CBFED5D7CC6ED120|japanese_tracks-3.2\jptracks.grf = 0 0 0 0 2 1 1 1 2 1 1<br>
+  454E0202|347C9601B84968FA503FBEBE1D0F7CA1|maglev_track_set_v2-2.4\maglev_track_set.grf = 0 4 4 2 2 0 1 1 1 1 1 1 1 2 3 4 5 1 1<br>
+  FBFB0A01|F72870562FBD9CC015A0CCDC60588F86|useless_tracks-0.1.0\uselesstracks.grf = 0 1 1 1<br>
+  "454E3701|8FA20EE7E0F6B4C00E0B578A687D7694|trackless_trackset-1.1\trackless - 1.1.grf" = 0 1 1 1<br>
+  19060801|6CFC6328D999C140851BFE6514BA277A|bigger_depots.0.3\bigdepot.grf = <br>
+  55464989|4168A85A8729287F9AE283285899274D|u_ratt-0.2a\uratt.grf = 1 3 2 2 2 0 0 0 1<br>
+  47524302|B5ABC1160E457123E774E65F9362E7CB|gpl_roadtype_collection_pt._2-0.10a\grc2.grf = 0 0 2<br>
+  47524306|F46AAE9A8308CB38F7267FBBFF652D06|gpl_roadtype_collection_pt._6-0.2a\grc6.grf = 13 13<br>
+  74677563|8A53DE2FF752868097FBE403FACD8DA4|total_bridge_renewal_japan-1.12\total_bridgesw.grf = <br>
+  4E4D2011|3289FD2E09657D75AB375073D154764A|nml_cat2.0_stations-42069\nml_category_system-11-stations.grf = <br>
+  58534453|2E100BCA91DB8371CD9D57DBEC3AB0C8|dutch_stations_set-1.0.0alpha\dutchstatw.grf = <br>
+  504A0110|E8244C5278CB2408A818854DC11F8940|dutch_station_addition_set-0.8\dstatadd_v0_8.grf = <br>
+  504A0112|80D0B8699A417CC03CD06BC74E8796D0|dutch_station_addition_part_2-0.4\dstatadd_part2_v0_4.grf = <br>
+  504A0113|0B65D0779D65427BC135FC624278FEA3|dutch_station_addition_part_3-001\dstatadd_part3_v001.grf = <br>
+  45530500|D9BE5AFA481FC3E0A96E6EB72B455612|japanese_stations-3.6\jpstations.grf = 1 1 1 1<br>
+  454E2702|12B1047B116641793BB2A5D684E648E2|dprk_stations-1.3\dprkstations.grf = <br>
+  454E2801|87AB157F67AD0EFE699F9E3C180B2E91|dprk_stations_addon-1.2\dprk_stations_addon_1.2.grf = <br>
+  454E2703|CD6F7226876FAA4CED8DA46AFE25A293|dprk_stations_v2_platforms-2.2\dprk-stations-v2.2-platforms.grf = 1 1<br>
+  454E3401|1735068831BBEB95AA821CB4B7A7B7A6|dprk_stations_v2_eyecandy-2.2\dprk-stations-v2.2-eyecandy-part-1.grf = 1 1 1<br>
+  4A430002|93EAC5F5396584B92D4C5F0AAAF3F6C5|industrial_stations_renewal-1.0.2\indstatr.grf = 0 1<br>
+  47474709|B2871F0F49743A1098D2F6F855DAEC1B|auz_stations_platforms-1\auzstationsplatforms.grf = <br>
+  47474711|3AF60E8B66A0577226F8A13309E5720E|auz_stations_and_nontracks-1\auzstationsandnontracks.grf = <br>
+  47474710|737B5BD4EEB3F15AA9129CD185AA7F08|auz_stations_addons-1\auzstationsaddons.grf = <br>
+  47474712|4FBA2450B2D98D18D1DE61E6FD4E11D8|auz_stations_more_addons-1\auzstationsmoreaddons.grf = <br>
+  47474705|6D9D5B2E44D9EFE3EEE35BB92E971EC8|auzfreightstations-8\auzfreightstations_v008.grf = <br>
+  47474708|CF484D1DA7816918320F33BD3B2A4735|auz_more_freight_stations-1\auzmorefreightstationsv1.grf = <br>
+  43485053|BD7D7783BDFCA29CF1149CF9271FD8BB|chips_station_set-1.9.0\chips.grf = <br>
+  FBFB0901|802B922708BD5A7BEB63585BABF43803|friss__stations_and_other_infra-0.5.3\friss-stations.grf = 0<br>
+  44578619|B30A5E35634A59D2BDD9C2389CEDBF2C|dwestationtiles__fences-v1.2\fences.grf = <br>
+  44450002|94F025F7345888FC3062F233C569D248|modular_locomotive_shed_stations-0.2.6\mlss026.grf = <br>
+  444E0400|735D3D74D5DCADBF1FD6EF7A9C5A3519|vast_station_tiles-0.2.0\vast.grf = <br>
+  4E4D2012|605B622FBDF03D903C45A7E0EE5D80CA|nml_cat2.0_rail_vehicles-42069\nml_category_system-12-rail_vehicles.grf = <br>
+  535A0D00|21AC703CAB2BE6A80FAF2344366FE0C1|japanese_train_set-3.3\jptrains.grf = 0 1 1 2 1 0 1 1 0 0 0 0<br>
+  44501401|5B9D588504701CCC2BB14CDB1F18D06B|japanese_maglevs-3.1\jptrainsadd.grf = 0 0 0 0 0 1 1 0<br>
+  454E2201|7E7A46E2CF0C7C1BA92F9B0DE7C262A9|okinawa_trainset-1.3\okinawa_trainset_1.3.grf = 1 2 2<br>
+  454E2101|16DD458D62FAD59BA0D12D7C3958AB2A|nats_nagoya_area_train_set-0.5.1\nagoya_area_train_set_0.5.1.grf = 1 2 2<br>
+  454E0601|7CAF4DFFE98181DCE61CA65A4F853647|north_korean_train_set-1.12\dprktrains.grf = 1 3 3 1 1 0<br>
+  454E2001|342B064182A42854EF830BC11BE86E4E|real_international_maglev_set-1.6\rims.grf = 1 4 4 0 4 1 1 1 1 1 1 1 0 0 1 1<br>
+  454E1901|E84F4875E7EBC3B7DB5379746A0AD563|future_reality_inspired_maglevs-1.3\frims_maglev_set_1.3.grf = 1 4 4 4 1 1 1 1 1 1 1 0 0 1<br>
+  4E4D2013|89767C36A030B19AFE15CF8E40437F36|nml_cat2.0_road_vehicles-42069\nml_category_system-13-road_vehicles.grf = <br>
+  454E2401|5E0469D0BEBBA516D551B7C973C0C9E1|north_korean_tram_set-1.4.1\dprk_trams_1.4.grf = 1 2 2<br>
+  454E2502|05EB1E727ACE7BE3CECD4491705B3E71|north_korean_road_vehicles_2.0-2.2\dprkroadvehicle_2.2.grf = 1 2 2<br>
+  52571204|78F391DEBC824F7422A587723A0EF816|egrvts2_nrt-r207\egrvts2.grf = 0 127 2 0<br>
+  41501202|B13DD8FB0D7C34CACAC2FE68BD137BB9|heqs_heavy_equipment_set-1.5.2\heqs.grf = 9 9 1 1 1 1<br>
+  9787EAFE|04ACD20A006E345283D6464678AFFA8B|road_hog-1.4.1\road-hog.grf = 1 0 0<br>
+  4E4D2014|7D576D4B6C854EC61C343292D4BBBDFF|nml_cat2.0_aircraft-42069\nml_category_system-14-aircraft.grf = <br>
+  46538787|C5AA2F0B782AFF243183FED0BF0425E5|av8_minimal_supp_was-1.0\av8-minwas-fs87.grf = <br>
+  57A50001|318F3C3F17CA68EAD533BAC88B093094|was_world_airliners_set-0.1\was.grf = 0 1<br>
+  4B4B1101|AF908557A71573681F5A0A72015B1378|vace__vtol_aircraft_for_everyon-4\vace.grf = 0 0<br>
+  4E4D2015|66187DF1E0539AF43612C0585E89F38E|nml_cat2.0_watercraft-42069\nml_category_system-15-watercraft.grf = <br>
+  414E0201|0DA3A80B986BC3C17C20CA4CE9CA26AA|fish_2-2.0.3\fish.grf = 1 1 0<br>
+  55535333|C9297AEFBEC6FF7268D42528555D783E|unsinkable_sam-preview_4\unsinkable-sam.grf = 0 1 0<br>
+  4E4D2007|08A59E628B087D8011ACC180A8B52B8C|nml_cat2.0_new_objects-42069\nml_category_system-07-new_objects.grf = <br>
+  47474750|CC503C2C94F72555E51D085DB27E3703|auzcarparksandsubwayoverlays-1\auzcarparksandsubwayoverlays.grf = <br>
+  47470801|83C613817E5B62EE7F8106110E5AB790|auzslopeawaregroundtiles-1\auzslopeawaregroundtiles.grf = <br>
+  47474045|01EB7E914F4BB56D84872A94FC824B99|auzfake_rails_and_trains_objects-5\auzfakerailsandtrainsobjects.grf = <br>
+  47473637|B92937CF339BEA2B70991E0838402D28|auz_farms_and_fences_obects-4\auzfarmandfencesobjects.grf = 0<br>
+  47473334|9765BAA9E745A6CA109551F9CB2F0631|auz_road_and_town_objects-5\auzroadandtownobjects.grf = 0<br>
+  47474713|504F0AFBD24C4D8A790173EBA3C9C981|auz_train_depot_extensions-1\auztraindepotextensions.grf = <br>
+  47473839|E45A4629CCB533AB9F96108346C58F90|auz_water_and_landscape_objects-4\auzwaterandlandscapeobjects.grf = <br>
+  504A0107|92B822D319E71F920908801AD5751D26|beach_objects-1.2\beach_v1_2.grf = <br>
+  4252534F|25DE8BE3403FF6DB2C98B99B58880486|brobjects-0.0.1\brobjects.grf = <br>
+  0100403A|9B09BC78A4BA1EB7F55B6F13644FBBA5|city_objects-1\cov1.grf = <br>
+  52580101|D7400DACF064356088E0A13B836A52B9|firs_and_chips_style_objects-0.1.10\facso_0.1.10.grf = <br>
+  52580102|2711A8184D657B7ECBACFAE6D05CB632|cirso_facso_terrain-0.1.10\cirso_0.1.10.grf = <br>
+  504A0013|8C19753CB66905E869534611828C2654|isrdwestyle_objects-1.1\isrdwe_objects_v1_1.grf = <br>
+  44573553|EF7529EBEAF35758EE07E628B25F608D|dwenewobjects-v0.1\dwe_newobj.grf = <br>
+  44573452|48CF5FC0DEB895136F337A7E563FC66D|dwestationtiles_industrial_ter-v0.7\dwe_stat_r.grf = <br>
+  444C4F53|39F25FC87E91F7C4E45D9CC11F0FB52B|dutch_landmark_objects_set-0.2\dlos.grf = <br>
+  FBFB0501|60082E7DF1D3976274AB86843C3E07B2|dutch_road_furniture-0.7.1\dutchroadfurniture.grf = 0 0 0<br>
+  FBFB0502|55AE61673CBCDE4A7231DEA85973278C|dutch_road_furn._uk_signs_addon-1.0.0\dutchroadfurnitureuksignsaddon.grf = 0<br>
+  434B4FB1|C89C9321DE4355C9395D147A7AC88A53|generic_skyscraper_objects_set-0.1\genericskyscrapers.grf = <br>
+  504A5457|D795341420C564012E262FAB630018C5|town_walls_objects-0.1\townwalls_v0_1.grf = <br>
+  504A4641|457DE3A141B99D6BE258981C993B6761|fake_airport_objects-0.1\fakeairportobjects_v0_1.grf = <br>
+  54470203|F84B6D37659F23D19E176C99BC48DEF6|opengfx_airports_as_objects-0.3\airportobjects.grf = <br>
+  53441101|7D8CFEEC75DA8705DF8E858287E3DC39|infra_green_p1-1.0\infra_green1x1_p1.grf = <br>
+  53541101|ECB758CAF23442BC55A0976A3EEEF1DB|infra_streets_p1-1.0\infra_streets1x1_p1.grf = <br>
+  4D470305|2E96B9AB2BEA686BFF94961AD433A701|basecosts-5.0\basecosts.grf = 8 9 9 8 9 11 11 11 9 9 9 16 11 11 11 9 9 10 9 9 12 11 9 10 10 9 8 8 8 8 8 8 8 8 10 8 8 8 8 8 8 8 6 6 6 8 7 7 5 8 6 8 8 8 8 8 7 10 5 3 8 8 8 8 10 10 8 8 8 8 8<br>
+  45520C00|FCF4EE39F19C02D9E8603D07621DDD99|japanese_town_names.0.6\jpset_namw.grf = <br>
+  </div></div>
 </div>
 
 <script>
