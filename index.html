@@ -3,6 +3,13 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+/* animated spoiler CSS by Bloggersentral.com */
+.spoilerbutton {display:block;margin:5px 0;}
+.spoiler {overflow:hidden;background: #f5f5f5;}
+.spoiler > div {-webkit-transition: all 0.2s ease;-moz-transition: margin 0.2s ease;-o-transition: all 0.2s ease;transition: margin 0.2s ease;}
+.spoilerbutton[value="Show"] + .spoiler > div {margin-top:-100%;}
+.spoilerbutton[value="Hide"] + .spoiler {padding:5px;} 
+
 * {box-sizing: border-box}
 
 /* Set height of body and the document to 100% */
@@ -89,6 +96,13 @@ table, th, td {
     <td></td>
   </tr>
 </table>
+  <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
+  <div class="spoiler"><div>
+  [preset-AndyIsGod]<br>
+  F1250007|997B31233DCFC059D343EB90E046D7EB|firs_industry_replacement_set_3-3.0.12\firs.grf = 3 0 0 0 0 0 50 500 200 1000<br>
+  4341121F|8A54D8DE02C25D3DA95AF1DBB3374BF3|iron_horse_2-2.8.0\iron-horse.grf = 1 0 0<br>
+  9787EAFE|04ACD20A006E345283D6464678AFFA8B|road_hog-1.4.1\road-hog.grf = 1 0 0<br>
+  </div></div>
 </div>
 
 <div id="Moderate" class="tabcontent">
