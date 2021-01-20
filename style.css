@@ -1,0 +1,70 @@
+.spoiler {
+  border-radius: 2px;
+  background-color: #DDD;
+  padding: 1%;
+  display: table;
+}
+
+.spoiler-header, .spoiler-toggle {
+  /* float: left; */
+  display: inline-block;
+}
+
+.spoiler-toggle {
+  margin-left: 2rem;
+}
+
+.spoiler > .spoiler-content {
+  display: none;
+}
+
+.spoiler.open > .spoiler-content {
+  display: block;
+  background-color: #fff;
+  margin-top: 0.5rem;
+  padding: 3%;
+}
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Helvetica;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #CCC;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #BBB;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 400%;
+}
+
+#Home {background-color: #DBCEC0;}
+#Vanilla {background-color: #B3EFD3;}
+#Moderate {background-color: #F7E2AD;}
+#Heavy {background-color: #F4B0A6;}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
