@@ -1,59 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-/* animated spoiler CSS by Bloggersentral.com */
-.spoilerbutton {display:block;margin:5px 0;}
-.spoiler {overflow:hidden;background: #f5f5f5;}
-.spoiler > div {-webkit-transition: all 0.2s ease;-moz-transition: margin 0.2s ease;-o-transition: all 0.2s ease;transition: margin 0.2s ease;}
-.spoilerbutton[value="Show"] + .spoiler > div {margin-top:-150%;}
-.spoilerbutton[value="Hide"] + .spoiler {padding:5px;} 
-
-* {box-sizing: border-box}
-
-/* Set height of body and the document to 100% */
-body, html {
-  height: 200%;
-  margin: 0;
-  font-family: Helvetica;
-}
-
-/* Style tab links */
-.tablink {
-  background-color: #999;
-  color: black;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
-}
-
-.tablink:hover {
-  background-color: #BBB;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: black;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-}
-
-#Home {background-color: #DBCEC0;}
-#Vanilla {background-color: #B3EFD3;}
-#Moderate {background-color: #F7E2AD;}
-#Heavy {background-color: #F4B0A6;}
-
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-</style>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>GRF is a Recommendation Forum</title>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -71,6 +21,13 @@ table, th, td {
   <p>For 64+ GRFs at once to be loaded, you MUST use a patch pack such as <a href="https://github.com/JGRennison/OpenTTD-patches/releases">JGRPP</a>.</p>
   <p><b>'CD'</b> column denotes if a GRF is available on the Online Content Downloader, serviced by <a href="https://bananas.openttd.org">Bananas</a>. If it's not available, it should be linked in <b>Notes</b>.
   <p>If you want to add your own list, visit <a href="https://github.com/CaptainKlutz/GRF.github.io">the Github</a> to start contributing.</p>
+  <div class="spoiler">
+  <div class="spoiler-header">This is an example of a spoiler containing a .cfg preset.</div>
+  <button class="spoiler-toggle">Open Spoiler</button>
+  <div class="spoiler-content">
+    <p>This text should contain a list of GRFs in a format that OpenTTD can read.</p>
+  </div>
+  </div>
 </div>
 
 <div id="Vanilla" class="tabcontent">
@@ -106,18 +63,61 @@ table, th, td {
     <td></td>
   </tr>
 </table>
-  <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
-  <div class="spoiler"><div>
-  [preset-AndyIsGod]<br>
-  F1250007|997B31233DCFC059D343EB90E046D7EB|firs_industry_replacement_set_3-3.0.12\firs.grf = 3 0 0 0 0 0 50 500 200 1000<br>
-  4341121F|8A54D8DE02C25D3DA95AF1DBB3374BF3|iron_horse_2-2.8.0\iron-horse.grf = 1 0 0<br>
-  9787EAFE|04ACD20A006E345283D6464678AFFA8B|road_hog-1.4.1\road-hog.grf = 1 0 0<br>
-  </div></div>
+<br>
+  <div class="spoiler">
+  <div class="spoiler-header">AndyIsGod</div>
+  <button class="spoiler-toggle">Open Spoiler</button>
+  <div class="spoiler-content">
+    [preset-AndyIsGod]<br>
+    F1250007|997B31233DCFC059D343EB90E046D7EB|firs_industry_replacement_set_3-3.0.12\firs.grf = 3 0 0 0 0 0 50 500 200 1000<br>
+    4341121F|8A54D8DE02C25D3DA95AF1DBB3374BF3|iron_horse_2-2.8.0\iron-horse.grf = 1 0 0<br>
+    9787EAFE|04ACD20A006E345283D6464678AFFA8B|road_hog-1.4.1\road-hog.grf = 1 0 0<br>
+  </div>
+  </div>
+  
 </div>
 
 <div id="Moderate" class="tabcontent">
   <h3>For those looking for a more immersive game.</h3>
-  <p></p>
+  <br>
+  <br>
+  <h4>Klutz's Object Collection</h4>
+  <p>Author: Cpt.Klutz</p>
+  <p>Last Updated: January 2021</p>
+  <p><b>CD?</b> Yes</p>
+  <p><b>Notes:</b> Contains my favourite object sets.</p>
+  <div class="spoiler">
+  <div class="spoiler-header">ObjectTest</div>
+  <button class="spoiler-toggle">Open Spoiler</button>
+  <div class="spoiler-content">
+  [preset-ObjectTest]<br>
+  4E4D2007|08A59E628B087D8011ACC180A8B52B8C|nml_cat2.0_new_objects-42069\nml_category_system-07-new_objects.grf = <br>
+  47474750|CC503C2C94F72555E51D085DB27E3703|auzcarparksandsubwayoverlays-1\auzcarparksandsubwayoverlays.grf = <br>
+  47470801|83C613817E5B62EE7F8106110E5AB790|auzslopeawaregroundtiles-1\auzslopeawaregroundtiles.grf = <br>
+  47474045|01EB7E914F4BB56D84872A94FC824B99|auzfake_rails_and_trains_objects-5\auzfakerailsandtrainsobjects.grf = <br>
+  47473637|B92937CF339BEA2B70991E0838402D28|auz_farms_and_fences_obects-4\auzfarmandfencesobjects.grf = 0<br>
+  47473334|9765BAA9E745A6CA109551F9CB2F0631|auz_road_and_town_objects-5\auzroadandtownobjects.grf = 0<br>
+  47474713|504F0AFBD24C4D8A790173EBA3C9C981|auz_train_depot_extensions-1\auztraindepotextensions.grf = <br>
+  47473839|E45A4629CCB533AB9F96108346C58F90|auz_water_and_landscape_objects-4\auzwaterandlandscapeobjects.grf = <br>
+  504A0107|92B822D319E71F920908801AD5751D26|beach_objects-1.2\beach_v1_2.grf = <br>
+  4252534F|25DE8BE3403FF6DB2C98B99B58880486|brobjects-0.0.1\brobjects.grf = <br>
+  0100403A|9B09BC78A4BA1EB7F55B6F13644FBBA5|city_objects-1\cov1.grf = <br>
+  52580101|D7400DACF064356088E0A13B836A52B9|firs_and_chips_style_objects-0.1.10\facso_0.1.10.grf = <br>
+  52580102|2711A8184D657B7ECBACFAE6D05CB632|cirso_facso_terrain-0.1.10\cirso_0.1.10.grf = <br>
+  504A0013|8C19753CB66905E869534611828C2654|isrdwestyle_objects-1.1\isrdwe_objects_v1_1.grf = <br>
+  44573553|EF7529EBEAF35758EE07E628B25F608D|dwenewobjects-v0.1\dwe_newobj.grf = <br>
+  44573452|48CF5FC0DEB895136F337A7E563FC66D|dwestationtiles_industrial_ter-v0.7\dwe_stat_r.grf = <br>
+  444C4F53|39F25FC87E91F7C4E45D9CC11F0FB52B|dutch_landmark_objects_set-0.2\dlos.grf = <br>
+  FBFB0501|60082E7DF1D3976274AB86843C3E07B2|dutch_road_furniture-0.7.1\dutchroadfurniture.grf = 0 0 0<br>
+  FBFB0502|55AE61673CBCDE4A7231DEA85973278C|dutch_road_furn._uk_signs_addon-1.0.0\dutchroadfurnitureuksignsaddon.grf = 0<br>
+  434B4FB1|C89C9321DE4355C9395D147A7AC88A53|generic_skyscraper_objects_set-0.1\genericskyscrapers.grf = <br>
+  504A5457|D795341420C564012E262FAB630018C5|town_walls_objects-0.1\townwalls_v0_1.grf = <br>
+  504A4641|457DE3A141B99D6BE258981C993B6761|fake_airport_objects-0.1\fakeairportobjects_v0_1.grf = <br>
+  54470203|F84B6D37659F23D19E176C99BC48DEF6|opengfx_airports_as_objects-0.3\airportobjects.grf = <br>
+  53441101|7D8CFEEC75DA8705DF8E858287E3DC39|infra_green_p1-1.0\infra_green1x1_p1.grf = <br>
+  53541101|ECB758CAF23442BC55A0976A3EEEF1DB|infra_streets_p1-1.0\infra_streets1x1_p1.grf = 
+  </div>
+  </div>
 </div>
 
 <div id="Heavy" class="tabcontent">
@@ -128,8 +128,11 @@ table, th, td {
   <p>Author: Cpt.Klutz</p>
   <p>Last Updated: January 2021</p>
   <p><b>CD?</b> Yes</p>
-  <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
-  <div class="spoiler"><div>
+  <p><b>Notes:</b> Japanese and North Korean trains</p>
+  <div class="spoiler">
+  <div class="spoiler-header">S2JanJapan</div>
+  <button class="spoiler-toggle">Open Spoiler</button>
+  <div class="spoiler-content">
   [preset-S2JanJapan]<br>   
   4E4D2005|6CDB71C352BC28C665F06B610AA41576|nml_cat2.0_gui_misc_town_names-42069\nml_category_system-05-gui_misc_and_town_names.grf = <br>
   4F472B34|136D889FDAEAA3491F8320248A04425C|opengfx_landscape-1.1.2\ogfx-landscape.grf = 12 1 12 20 5 0<br>
@@ -221,9 +224,11 @@ table, th, td {
   53541101|ECB758CAF23442BC55A0976A3EEEF1DB|infra_streets_p1-1.0\infra_streets1x1_p1.grf = <br>
   4D470305|2E96B9AB2BEA686BFF94961AD433A701|basecosts-5.0\basecosts.grf = 8 9 9 8 9 11 11 11 9 9 9 16 11 11 11 9 9 10 9 9 12 11 9 10 10 9 8 8 8 8 8 8 8 8 10 8 8 8 8 8 8 8 6 6 6 8 7 7 5 8 6 8 8 8 8 8 7 10 5 3 8 8 8 8 10 10 8 8 8 8 8<br>
   45520C00|FCF4EE39F19C02D9E8603D07621DDD99|japanese_town_names.0.6\jpset_namw.grf = <br>
-  </div></div>
+  </div>
+  </div>
 </div>
 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 <script>
 function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
